@@ -15,6 +15,8 @@ import GuidePageConfig from './views/nav4/GuidePageConfig.vue'
 import IntegralConfig from './views/nav4/IntegralConfig.vue'
 import SubscribeConfig from './views/nav4/SubscribeConfig.vue'
 
+import userinfo from './views/user/user.vue'
+
 let routes = [
     {
         path: '/login',
@@ -48,6 +50,16 @@ let routes = [
         children: [
             // { path: '/main', component: Main, name: '主页', hidden: true },
             { path: '/Application', component: Application, name: '应用管理' },
+        ]
+    },
+    {
+        path: '/',
+        component: Home,
+        name: '',
+        iconCls: 'el-icon-menu',//图标样式class
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/userinfo', component: Application, name: '用户管理' },
         ]
     },
     {
